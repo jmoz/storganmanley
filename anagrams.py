@@ -1,9 +1,3 @@
-# Write a function that, for a given input string, returns all
-# anagrams found in the words file.
-#
-# Requirements:
-# 1. Efficient implementation of get_anagrams().
-# 2. Additional unit test coverage (with unittest or other framework).
 import gzip
 import timeit
 import unittest
@@ -42,7 +36,6 @@ class Anagrams:
 
 
 class TestAnagrams(unittest.TestCase):
-
     def test_anagrams(self):
         anagrams = Anagrams('words.txt')
         self.assertEqual(
