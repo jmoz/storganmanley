@@ -24,6 +24,12 @@ class SortedAlgorithm:
         return anagrams
 
 
+class SortedListCompAlgorithm:
+    def get_anagrams(self, word, words):
+        sorted_word = sorted(word)
+        return [w for w in words if sorted(w) == sorted_word]
+
+
 class Anagrams:
     def __init__(self, words_file_path, algorithm_class=None):
         with gzip.open(f'{words_file_path}.gz', 'r') as f:
@@ -68,7 +74,7 @@ class TestAlgorithms(unittest.TestCase):
 
 if __name__ == '__main__':
     timing_setup = {
-        'algorithms': [CounterAlgorithm, SortedAlgorithm],
+        'algorithms': [CounterAlgorithm, SortedAlgorithm, SortedListCompAlgorithm],
         'number': 100
     }
 
