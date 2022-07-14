@@ -32,7 +32,7 @@ class Anagrams:
         self.algorithm = algorithm_class() if algorithm_class else CounterAlgorithm()
 
     def get_anagrams(self, word):
-        return self.algorithm.get_anagrams(word, self.words)
+        return self.algorithm.get_anagrams(word.lower(), self.words)
 
 
 class TestAnagrams(unittest.TestCase):
@@ -63,6 +63,14 @@ class TestAlgorithms(unittest.TestCase):
             self.assertEqual(
                 self.anagrams.get_anagrams('rhythm'),
                 ['rhythm']
+            )
+
+    def test_anagrams_case(self):
+        for algorithm in self.algorithms:
+            self.anagrams.algorithm = algorithm()
+            self.assertEqual(
+                self.anagrams.get_anagrams('DICTionary'),
+                ['dictionary', 'indicatory']
             )
 
 
