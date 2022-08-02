@@ -1,0 +1,9 @@
+Dear candidate,
+
+Thank you for your interest in our role.
+Please find attached a programming exercise, for you to solve at home. It should not take longer than 2 hours, but there is no time limit for handing in your solution.
+In your reply, please remember to rename any *.py files to *.txt.
+Feel free to comment with any design decisions, assumptions etc. If successful, the solution will be discussed in a follow-up interview.
+
+Thank you and good luck,
+Giulio Agostini and the RAPD team
